@@ -7,6 +7,7 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./employee.component.css'],
 })
 export class EmployeeComponent implements OnInit {
+  dataArr: any;
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
@@ -15,7 +16,7 @@ export class EmployeeComponent implements OnInit {
 
   getEmployeeData() {
     this.dataService.getData().subscribe((res) => {
-      console.log(res);
+      this.dataArr = res;
     });
   }
 }
