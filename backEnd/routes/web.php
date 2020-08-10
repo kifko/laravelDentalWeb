@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/employee', 'EmployeeController@getEmployee');
+Route::post('/addemployee', 'EmployeeController@addEmployee');
