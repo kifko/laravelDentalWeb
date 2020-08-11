@@ -21,4 +21,13 @@ class Employee
     {
         DB::table('employee')->where('id', $id)->delete();
     }
+    function updateEmployee($id, $data)
+    {
+        DB::table('employee')->where('id', $id)->update($data);
+    }
+    function getOneEmployee($id)
+    {
+        $data = DB::table('employee')->where('id', $id)->get()->first();
+        return $data;
+    }
 }

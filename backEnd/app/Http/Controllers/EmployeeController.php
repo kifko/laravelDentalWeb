@@ -27,4 +27,17 @@ class EmployeeController extends Controller
         $employeeModel->deleteEmployee($id);
         // echo $id;
     }
+    function updateEmployee(Request $request)
+    {
+        $id = $request->id;
+        $employeeModel = new Employee();
+        $employeeModel->updateEmployee($id, $request->all());
+    }
+    function getOneEmployee(Request $request)
+    {
+        $id = $request->id;
+        $employeeModel = new Employee();
+        $data = $employeeModel->getOneEmployee($id);
+        return response()->json($data);
+    }
 }
