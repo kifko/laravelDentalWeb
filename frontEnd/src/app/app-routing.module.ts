@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     component: EmployeeComponent,
   },
+  {
+    path: 'edit/:id',
+    component: EditComponent,
+  },
 ];
 
 @NgModule({
