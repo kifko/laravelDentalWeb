@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::get('/employee', 'EmployeeController@getEmployee');
 Route::post('/addemployee', 'EmployeeController@addEmployee');
+// Route::put('/updateemployee', 'EmployeeController@updateEmployee');
+Route::delete('/deleteemployee/{id}', 'EmployeeController@deleteEmployee');

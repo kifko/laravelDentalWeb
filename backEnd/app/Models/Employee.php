@@ -12,9 +12,13 @@ class Employee
         return $data;
     }
     function addEmployee($data)
-    {;
+    {
         // dd($data)
         // dd("model called");
         DB::table('employee')->insert($data);
+    }
+    function deleteEmployee($id)
+    {
+        DB::table('employee')->where('id', $id)->delete();
     }
 }

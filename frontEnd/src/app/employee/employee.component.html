@@ -32,6 +32,7 @@
         <th scope="col">Surname</th>
         <th scope="col">Email</th>
         <th scope="col">Phone</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -41,6 +42,7 @@
         <td>{{obj.surname}}</td>
         <td>{{obj.email}}</td>
         <td>{{obj.phone}}</td>
+        <td><button class="btn btn-danger" (click)="deleteData(obj.id)">Delete</button></td>
       </tr>
     </tbody>
   </table>

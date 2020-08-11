@@ -12,4 +12,7 @@ export class DataService {
   insertData(data) {
     return this.httpClient.post('http://127.0.0.1:8000/addemployee', data);
   }
+  deleteData(id) {
+    return this.httpClient.delete('http://127.0.0.1:8000/deleteemployee/' + id);
+  }
 }
